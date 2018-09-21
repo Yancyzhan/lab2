@@ -17,6 +17,7 @@ using namespace std;
 Shape::~Shape(){
 	delete [] shapeName;
 }
+
 Shape::Shape(const Shape& source):origin(source.origin), shapeName(new char[strlen(source.shapeName)+1])
 {
 	if(shapeName == NULL){
@@ -25,6 +26,7 @@ Shape::Shape(const Shape& source):origin(source.origin), shapeName(new char[strl
 	}
 	strcpy(shapeName, source.shapeName);
 }
+
 Shape& Shape::operator=(const Shape& rhs)
 {
 	if(this==&rhs)
@@ -39,3 +41,29 @@ Shape& Shape::operator=(const Shape& rhs)
 	origin = rhs.origin;
 	return *this;
 }
+
+char Shape::getName()
+{
+	return shapeName;
+}
+
+void Shape::display(Shape& other)
+{
+	cout<<"Shape Name:"<< other.getName()<<endl;
+	cout<<"X-coordinate:"<< other.origin -> get_x()<<endl;
+	cout<<"Y-coordinate:"<< other.origin -> get_y()<<endl;
+}
+
+double Shape::distance(Shape& other){
+	return other.origin ->get_y() - other.origin -> get_x();
+}
+
+static double Shape::distance (Shape& the_shape, Shape& other){
+}
+
+void Shape::move(double dx, double dy)
+{
+	this.origin -> get_x() += dx;
+	this.origin -> get_y() += dy;
+}
+

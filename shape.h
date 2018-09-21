@@ -5,6 +5,7 @@
 //
 // Date: Sept 21, 2018
 
+#include "Point.h"
 
 class Shape{
 	
@@ -25,5 +26,8 @@ public:
 	
 	void move (double dx, double dy);
 	
+private:
+	Point origin;
+	char* shapeName;
 
 }
