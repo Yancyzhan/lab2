@@ -24,9 +24,9 @@ public:
 	
 	void set_y(oy);
 	
-	static double distance(double x, double y);
+	static double distance(Point& the_point, Point& other);
 	
-	double distance (double x, double y);
+	double distance (Point& other);
 	
 private:
 	double x;
