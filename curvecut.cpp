@@ -13,7 +13,7 @@
 #inlcude <math.h>
 
 double CurveCut::area() const{
-		return Circle::calculateArea();
+		return CurveCut::calculateArea();
 	
 }
 

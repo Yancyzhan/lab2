@@ -8,15 +8,13 @@
 #ifndef CURVECUT_H
 #define CURVECUT_H
 
-class Circle: public Shape{
+class CurveCut: public Rectangle, public Circle{
 public:
-	Circle(int radius): rad(radius);
+	CurveCut(int radius): rad(radius);
 	char getName() const;
 	double area() const;
 	double calculateArea();
 	double perimeter() const;
-	double get_radius() const;
-	void set_radius(double r);
 	double calculatePer();
 	void display(Shape& shape);
 	
