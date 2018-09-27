@@ -1,7 +1,9 @@
 // point.cpp
 // ENSF 480 - Lab2 - Exercise A
 
-// Author: Yanzhao Zhang 30031217
+// Author: Yanzhao Zhang 30031217 and Kazi Ashfaq 30021563
+			
+
 //
 // Date: Sept 21, 2018
 
@@ -12,6 +14,12 @@
 
 using namespace std;
 
+Point::Point(double nX, double nY){
+	set_x(nX);
+	set_y(nY);
+	id++;
+	counter++;
+}
 void Point::display()
 {
 	cout<<"X-coordinate:"<<Point::get_x()<< endl;
@@ -24,22 +32,22 @@ void Point::initial()
 
 }
 	
-int Point::counter()
+static int Point::getCounter()
 {
-	
+	return counter;
 }
 
-double Point::get_x()
+double Point::get_x() const
 {
 	return x;
 }
 
-double Point::get_y()
+double Point::get_y()const
 {
 	return y;
 }
 
-int Point::get_id()
+int Point::get_id() const
 {
 	return id;
 }

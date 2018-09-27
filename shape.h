@@ -1,20 +1,21 @@
 // shape.h
 // ENSF 480 - Lab2 - Exercise A
 
-// Author: Yanzhao Zhang 30031217
+// Author: Yanzhao Zhang 30031217 and Kazi Ashfaq 30021563
 //
 // Date: Sept 21, 2018
 
-#include "Point.h"
-
+#include "point.h"
+#include <string.h>
 class Shape{
 	
 public:
+	Shape(Point& p, char* name);
 	Shape& operator = (const Shape& rhs);
 	Shape(const Shape& source):origin(source.origin), shapeName(new char[strlen(source.shapeName)+1]);
 	~Shape();
 	
-	double getOrigin();
+	Point& getOrigin() const;
 	
 	char getName();
 	
@@ -30,4 +31,4 @@ private:
 	Point origin;
 	char* shapeName;
 
-}
+};

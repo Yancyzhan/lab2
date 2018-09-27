@@ -1,11 +1,11 @@
 // shape.cpp
 // ENSF 480 - Lab2 - Exercise A
 
-// Author: Yanzhao Zhang 30031217
+// Author: Yanzhao Zhang 30031217 and Kazi Ashfaq 30021563
 //
 // Date: Sept 21, 2018
 
-
+#include "point.h"
 #include "shape.h"
 #include <string.h>
 #include <iostream>
@@ -13,7 +13,11 @@
 using namespace std;
 
 
-
+Shape::Shape(Point& point, char* sName){
+	
+	origin = point;
+	strcpy(shapeName,sName);
+}
 Shape::~Shape(){
 	delete [] shapeName;
 }
@@ -46,7 +50,10 @@ char Shape::getName()
 {
 	return shapeName;
 }
-
+Point& Shape::getOrigin()const{
+	
+	return origin;
+}
 void Shape::display(Shape& other)
 {
 	cout<<"Shape Name:"<< other.getName()<<endl;
