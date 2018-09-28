@@ -14,31 +14,37 @@
 
 using namespace std;
 
-/*Square::Square(double x, double y, double side,char* name):Shape(x,y,name){
+// Square::Square(double x, double y, double side,char* name):Shape(x,y,name){
 	
-	side_a = side;
+	// side_a = side;
 	
 	
-}*/
-double Square::getArea() const{
-		return Square::calculateArea();
+// }
+
+double Square::area() const{
+		return (side_a * side_a);
 	
 }
 
-double Square::calculateArea(){
-	return side_a * side_a;
-}
+// double Square::calculateArea(){
+	// return side_a * side_a;
+// }
 
-double Square::getPerimeter() const{
+double Square::perimeter() const{
 	
-	return calculatePer();
-}
-
-double Square::calculatePer(){
 	return (4 * side_a);
 }
 
+// double Square::calculatePer(){
+	// return (4 * side_a);
+// }
+
 void Square::display(){
-	cout<<"square name: "<< endl;
+	cout<<"Square name: "<< getName()<<endl;
+	cout<<"X-coordinate: "<< get_x()<<endl;
+	cout<<"Y-coordinate: "<< get_y()<<endl;
+	cout<<"Side a: "<<get_side_a()<<endl;
+	cout<<"Area: "<<area()<<endl;
+	cout<<"Perimeter: "<<perimeter()<<endl;
 	
 }

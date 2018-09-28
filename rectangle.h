@@ -7,14 +7,17 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
+#include "square.h"
+#include "shape.h"
+
 class Rectangle: public Square {
 public:
-	Rectangle(int sidea, int sideb): side_a(sidea), side_b(sideb);
+	Rectangle(double x, double y, double sidea, double sideb, char* name): Square(x,y,sidea, name){side_a = sidea; side_b=sideb;};
 	double area() const;
 	double calculateArea();
 	double perimeter() const;
 	double calculatePer();
-	void display(Square& Square);
+	void display();
 	
 private:
 	int side_a; 
