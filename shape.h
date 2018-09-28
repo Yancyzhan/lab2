@@ -29,8 +29,11 @@ public:
 	//static double distance (Shape& the_shape, Shape& other);
 	
 	void move (double dx, double dy);
-	virtual double getArea() = 0;
-	virtual double getPerimeter() = 0;
+	//virtual double getArea() = 0;
+	//virtual double getPerimeter() = 0;
+	
+	double getArea() {};
+	double getPerimeter() {};
 	protected:
 	
 

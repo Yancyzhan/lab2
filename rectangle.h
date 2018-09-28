@@ -12,11 +12,11 @@
 
 class Rectangle: public Square {
 public:
-	Rectangle(double x, double y, double sidea, double sideb, char* name): Square(x,y,sidea, name){side_a = sidea; side_b=sideb;}
+	Rectangle(double x, double y, double sidea, double sideb, char* name): Square(x,y,sidea,name),Shape(x,y,name){side_a = sidea; side_b=sideb;}
 	double getArea();
-	double calculateArea();
+	
 	double getPerimeter();
-	double calculatePer();
+
 	void display();
 	void set_side_a(int a){side_a = a;}
 	void set_side_b(int b){side_b = b;}

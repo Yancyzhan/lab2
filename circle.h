@@ -4,23 +4,22 @@
 // Author: Yanzhao Zhang 30031217 and Kazi Ashfaq 30021563
 //
 // Date: Sept 21, 2018
-
+#include "shape.h"
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
 class Circle: virtual public Shape{
 public:
 	Circle(double x, double y, double radius,char* name):Shape(x,y,name){rad = radius;}
-	void set_rad(double r){rad = r;};
-	double get_rad(){return rad;};
-	double area() const;
-	double calculateArea();
-	double perimeter() const;
-	double calculatePer();
+	
+	double getArea() const;
+	
+	double getPerimeter() const;
+	double getRadius() const {return rad;}
 	void display();
 	
 protected:
-	int rad;
+	double rad;
 	
 };
 #endif

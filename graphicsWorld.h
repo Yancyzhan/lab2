@@ -10,6 +10,7 @@
 #include "square.h"
 #include "rectangle.h"
 #include "circle.h"
+#include "curvecut.h"
 class GraphicsWorld{
 	
 	public:

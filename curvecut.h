@@ -11,15 +11,19 @@
 
 class CurveCut: public Rectangle, public Circle{
 public:
-	CurveCut(double x, double y, double sidea, double sideb, double radius, char* name): Rectangle(x,y,sidea,sideb,name), Circle(x,y,radius,name);
-	double area() const;
-	double calculateArea();
-	double perimeter() const;
-	double calculatePer();
+	CurveCut(int x, int y, int w, int l, int r, char* name): Rectangle(x,y,w,l,name),Circle(x,y,r,name),Shape(x,y,name) {rad=r;width=w;length = l;}
+	
+	double getArea() const;
+	int getLength() const {return length;}
+	int getWidth() const{return width;}
+	double getPerimeter() const;
+	
 	void display();
 	
 private:
 	int rad;
+	int width;
+	int length;
 	
 };
 #endif
