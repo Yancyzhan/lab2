@@ -10,7 +10,7 @@
 #define SQUARE_H
 
 
-class Square: public Shape {
+class Square:virtual public Shape {
 public:
 	Square(double x, double y, double side,char* name):Shape(x,y,name){side_a = side;}
 	double getArea();

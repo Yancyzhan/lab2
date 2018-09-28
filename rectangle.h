@@ -22,7 +22,7 @@ public:
 	void set_side_b(int b){side_b = b;}
 	int get_side_a() const{return side_a;}
 	int get_side_b() const{return side_b;}
-private:
+protected:
 	int side_a; 
 	int side_b;
 };

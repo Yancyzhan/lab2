@@ -9,12 +9,12 @@
 #include "shape.h"
 #include <string.h>
 #include <iostream>
-#inlcude <math.h>
+#include <math.h>
 
 using namespace std;
 
 
-double Circle::area() const{
+double Circle::getArea() const{
 		return Circle::calculateArea();
 	
 }
@@ -23,7 +23,7 @@ double Circle::calculateArea(){
 	return (rad * rad * 3.14);
 }
 
-double Circle::perimeter() const{
+double Circle::getPerimeter() const{
 	
 	return calculatePer();
 }
@@ -33,5 +33,10 @@ double Circle::calculatePer(){
 }
 
 void Circle::display(){
-	cout<< Shape::getName <<endl;
+	cout<<"Circle name: "<<getName() << endl;
+	cout<<"X-coordinate: "<< origin.getX() <<endl;
+	cout<<"Y-coordinate: "<< origin.getY() <<endl;
+	cout<<"Side a: "<< getSide()<<endl;
+	cout<<"Area: "<< getArea()<<endl;
+	cout<<"Perimeter: "<< getPerimeter() <<endl;
 }

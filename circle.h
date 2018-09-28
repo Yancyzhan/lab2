@@ -3,22 +3,22 @@
 
 // Author: Yanzhao Zhang 30031217 and Kazi Ashfaq 30021563
 //
-// Date: Sept 21, 2018#ifndef CIRCLE_H
+// Date: Sept 21, 2018
 
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
-class Circle: public Shape{
+class Circle: virtual public Shape{
 public:
-	Circle(int radius): rad(radius);
+	Circle(double x, double y, double radius,char* name):Shape(x,y,name){rad = radius;}
 	char getName() const;
 	double area() const;
 	double calculateArea();
 	double perimeter() const;
 	double calculatePer();
-	void display(Shape& shape);
+	void display();
 	
-private:
+protected:
 	int rad;
 	
 };
