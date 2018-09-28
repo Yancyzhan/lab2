@@ -15,10 +15,10 @@ class Shape{
 public:
 	Shape(double x, double y, char* name);
 	Shape& operator = (const Shape& rhs);
-	Shape(const Shape& source):origin(source.origin), shapeName(new char[strlen(source.shapeName)+1]){};
+	Shape(const Shape& source);;
 	~Shape();
 	
-	Point& getOrigin() const;
+	Point& getOrigin();
 	
 	char* getName() const;
 	
@@ -26,11 +26,14 @@ public:
 	
 	double distance (Shape& other);
 	
-	static double distance (Shape& the_shape, Shape& other);
+	//static double distance (Shape& the_shape, Shape& other);
 	
 	void move (double dx, double dy);
+	virtual double getArea() = 0;
+	virtual double getPerimeter() = 0;
+	protected:
 	
-private:
+
 	Point origin;
 	char* shapeName;
 

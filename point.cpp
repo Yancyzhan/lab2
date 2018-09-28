@@ -14,7 +14,12 @@
 #include <math.h>
 
 using namespace std;
-
+Point::Point(double nx, double ny){
+	
+	setx(nx);
+	sety(ny);
+	//counter++;
+}
 /*static int Point::distance(Point p, Point q) 
 {
 	int numX = (p.getX() - q.getX()) * (p.getX() - q.getX());

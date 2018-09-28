@@ -8,7 +8,7 @@
 #define POINT_H
 class Point {
 public:
-Point(double nx, double ny):x(nx),y(ny){}
+Point(double nx, double ny);
 void display();
 //static int getCounter(){return counter;}
 double getX() const {return x;};

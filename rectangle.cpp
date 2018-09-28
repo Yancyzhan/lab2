@@ -16,7 +16,7 @@ using namespace std;
 
 
 
-double Rectangle::area() const{
+double Rectangle::getArea(){
 		return (side_a * side_b);
 	
 }
@@ -25,7 +25,7 @@ double Rectangle::area() const{
 	// return (side_a * side_b);
 // }
 
-double Rectangle::perimeter() const{
+double Rectangle::getPerimeter(){
 	
 	return (2 * (side_a + side_b));
 }
@@ -36,10 +36,10 @@ double Rectangle::perimeter() const{
 
 void Rectangle::display(){
 	cout<<"Rectangle name: "<< getName()<<endl;
-	cout<<"X-coordinate: "<< get_x()<<endl;
-	cout<<"Y-coordinate: "<< get_y()<<endl;
+	cout<<"X-coordinate: "<< origin.getX()<<endl;
+	cout<<"Y-coordinate: "<< origin.getY()<<endl;
 	cout<<"Side a: "<<get_side_a()<<endl;
 	cout<<"Side b: "<<get_side_b()<<endl;
-	cout<<"Area: "<<area()<<endl;
-	cout<<"Perimeter: "<<perimeter()<<endl;
+	cout<<"Area: "<<getArea()<<endl;
+	cout<<"Perimeter: "<<getPerimeter()<<endl;
 }

@@ -10,17 +10,16 @@
 
 class Circle: public Shape{
 public:
-	Circle(double x, double y, double radius, char* name): Shape(x,y,name){r = radius;};
-	double get_r() {return r;};
-	void set_r(double a) {r = a;};
+	Circle(int radius): rad(radius);
+	char getName() const;
 	double area() const;
-	//double calculateArea();
+	double calculateArea();
 	double perimeter() const;
-	//double calculatePer();
-	void display();
+	double calculatePer();
+	void display(Shape& shape);
 	
 private:
-	int r;
+	int rad;
 	
 };
 #endif

@@ -5,10 +5,10 @@
 //
 // Date: Sept 21, 2018
 
-#include "point.h"
-//#include "shape.h"
-//#include "square.h"
-//#include "rectangle.h"
+//#include "point.h"
+#include "shape.h"
+#include "square.h"
+#include "rectangle.h"
 class GraphicsWorld{
 	
 	public:
