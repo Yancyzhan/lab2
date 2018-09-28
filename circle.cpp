@@ -14,7 +14,7 @@
 using namespace std;
 
 
-double Circle::getArea() const{
+double Circle::area() const{
 		return Circle::calculateArea();
 	
 }
@@ -23,7 +23,7 @@ double Circle::calculateArea(){
 	return (rad * rad * 3.14);
 }
 
-double Circle::getPerimeter() const{
+double Circle::perimeter() const{
 	
 	return calculatePer();
 }
@@ -36,7 +36,7 @@ void Circle::display(){
 	cout<<"Circle name: "<<getName() << endl;
 	cout<<"X-coordinate: "<< origin.getX() <<endl;
 	cout<<"Y-coordinate: "<< origin.getY() <<endl;
-	cout<<"Side a: "<< getSide()<<endl;
-	cout<<"Area: "<< getArea()<<endl;
-	cout<<"Perimeter: "<< getPerimeter() <<endl;
+	cout<<"Radius: "<<get_rad()<<endl;
+	cout<<"Area: "<< area()<<endl;
+	cout<<"Perimeter: "<< perimeter() <<endl;
 }

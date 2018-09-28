@@ -4,19 +4,19 @@
 // Author: Yanzhao Zhang 30031217 and Kazi Ashfaq 30021563
 //
 // Date: Sept 21, 2018
-
+#include "rectangle.h"
+#include "circle.h"
 #ifndef CURVECUT_H
 #define CURVECUT_H
 
 class CurveCut: public Rectangle, public Circle{
 public:
-	CurveCut(int radius): rad(radius);
-	char getName() const;
+	CurveCut(double x, double y, double sidea, double sideb, double radius, char* name): Rectangle(x,y,sidea,sideb,name), Circle(x,y,radius,name);
 	double area() const;
 	double calculateArea();
 	double perimeter() const;
 	double calculatePer();
-	void display(Shape& shape);
+	void display();
 	
 private:
 	int rad;

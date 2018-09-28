@@ -11,7 +11,8 @@
 class Circle: virtual public Shape{
 public:
 	Circle(double x, double y, double radius,char* name):Shape(x,y,name){rad = radius;}
-	char getName() const;
+	void set_rad(double r){rad = r;};
+	double get_rad(){return rad;};
 	double area() const;
 	double calculateArea();
 	double perimeter() const;
