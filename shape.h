@@ -16,7 +16,7 @@ public:
 	Shape(double x, double y, char* name);
 	Shape& operator = (const Shape& rhs);
 	Shape(const Shape& source);;
-	~Shape();
+	virtual ~Shape();
 	
 	Point& getOrigin();
 	
@@ -29,8 +29,8 @@ public:
 	//static double distance (Shape& the_shape, Shape& other);
 	
 	void move (double dx, double dy);
-	virtual double getArea() = 0;
-	virtual double getPerimeter() = 0;
+	 virtual double getArea() = 0;
+	 virtual double getPerimeter() = 0;
 	protected:
 	
 

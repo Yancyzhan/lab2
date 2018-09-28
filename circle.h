@@ -5,10 +5,12 @@
 //
 // Date: Sept 21, 2018
 
+#include "shape.h"
+#include "point.h"
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
-class Circle: virtual public Shape{
+class Circle: public Shape{
 public:
 	Circle(double x, double y, double radius,char* name):Shape(x,y,name){rad = radius;}
 	void set_rad(double r){rad = r;};
@@ -19,7 +21,7 @@ public:
 	double calculatePer();
 	void display();
 	
-protected:
+private:
 	int rad;
 	
 };

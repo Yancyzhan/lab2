@@ -7,8 +7,8 @@
 
 //#include "point.h"
 #include "shape.h"
-#include "square.h"
-#include "rectangle.h"
+//#include "square.h"
+//#include "rectangle.h"
 #include "circle.h"
 class GraphicsWorld{
 	
