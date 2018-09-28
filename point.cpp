@@ -11,59 +11,35 @@
 #include "point.h"
 #include <string.h>
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
-Point::Point(double nX, double nY){
-	set_x(nX);
-	set_y(nY);
-	id++;
-	counter++;
+/*static int Point::distance(Point p, Point q) 
+{
+	int numX = (p.getX() - q.getX()) * (p.getX() - q.getX());
+	int numY = (p.getY() - q.getY()) * (p.getY() - q.getY());
+	int num = numX + numY;
+	int dist = pow(num,0.5);
+	
+	return dist;
+	
+}*/
+double Point::distance(Point other) const
+{
+	
+	double numX = (this->getX()- other.getX()) * (this->getX()- other.getX());
+	double numY = (this->getY()- other.getY()) * (this->getY()- other.getY());
+	
+	double num = numX + numY;
+	double dist = pow(num,0.5);
+	
+	return dist;
 }
+
 void Point::display()
 {
-	cout<<"X-coordinate:"<<Point::get_x()<< endl;
-	cout<<"Y-coordinate:"<<Point::get_y()<< endl;
+	cout<<"X-coordinate:"<<Point::getX()<< endl;
+	cout<<"Y-coordinate:"<<Point::getY()<< endl;
 	
-}
-
-void Point::initial()
-{
-
-}
-	
-static int Point::getCounter()
-{
-	return counter;
-}
-
-double Point::get_x() const
-{
-	return x;
-}
-
-double Point::get_y()const
-{
-	return y;
-}
-
-int Point::get_id() const
-{
-	return id;
-}
-
-void Point::set_x(double ox)
-{
-	x = ox; 	
-}
-
-void Point::set_y(double oy)
-{
-	y = oy;
-}
-
-double Point::distance(double ox, double oy) 
-{
-	double dist = oy - ox;
-	return dist;
 }

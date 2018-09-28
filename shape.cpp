@@ -13,9 +13,9 @@
 using namespace std;
 
 
-Shape::Shape(Point& point, char* sName){
+Shape::Shape(double x,double y, char* sName){
 	
-	origin = point;
+	origin = new Point(x,y);
 	strcpy(shapeName,sName);
 }
 Shape::~Shape(){
@@ -46,7 +46,7 @@ Shape& Shape::operator=(const Shape& rhs)
 	return *this;
 }
 
-char Shape::getName()
+	char* Shape::getName()const
 {
 	return shapeName;
 }
@@ -54,7 +54,7 @@ Point& Shape::getOrigin()const{
 	
 	return origin;
 }
-void Shape::display(Shape& other)
+void Shape::display()
 {
 	cout<<"Shape Name:"<< other.getName()<<endl;
 	cout<<"X-coordinate:"<< other.origin -> get_x()<<endl;

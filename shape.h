@@ -7,17 +7,20 @@
 
 #include "point.h"
 #include <string.h>
+
+#ifndef SHAPE_H
+#define SHAPE_H
 class Shape{
 	
 public:
-	Shape(Point& p, char* name);
+	Shape(double x, double y, char* name);
 	Shape& operator = (const Shape& rhs);
-	Shape(const Shape& source):origin(source.origin), shapeName(new char[strlen(source.shapeName)+1]);
+	Shape(const Shape& source):origin(source.origin), shapeName(new char[strlen(source.shapeName)+1]){};
 	~Shape();
 	
 	Point& getOrigin() const;
 	
-	char getName();
+	char* getName() const;
 	
 	void display();
 	
@@ -32,3 +35,4 @@ private:
 	char* shapeName;
 
 };
+#endif

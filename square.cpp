@@ -14,6 +14,12 @@
 
 using namespace std;
 
+/*Square::Square(double x, double y, double side,char* name):Shape(x,y,name){
+	
+	side_a = side;
+	
+	
+}*/
 double Square::getArea() const{
 		return Square::calculateArea();
 	
@@ -33,6 +39,6 @@ double Square::calculatePer(){
 }
 
 void Square::display(){
-	cout<<"square name: "
+	cout<<"square name: "<< endl;
 	
 }
